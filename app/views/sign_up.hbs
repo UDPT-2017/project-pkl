@@ -1,0 +1,52 @@
+<div class="wrapper bgded overlay" style="background-image:url('ligerrat/images/demo/backgrounds/Wooden.jpg');">
+    <section class="hoc container clear">
+        <!-- ################################################################################################ -->
+        <h2 class="font-x3 uppercase btmspace-80 underlined">Đăng ký tài khoản <a href="/">PHƯƠNG TRANG</a></h2>
+        <div class="hoc clear">
+            <form method="post" action="/signUp">
+                <div class="form-group">
+                    <label for="username">Tên đăng nhập *:</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input type="text" title=" Tên đăng nhập phải ít nhất 10 ký tự" class="form-control" id="username" name="username" placeholder="Xin nhập tên đăng nhập" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Mật khẩu *:</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <input type="password" title="Mật khẩu phải ít nhất 10 ký tự" class="form-control" id="pwd" name="password" placeholder="Xin nhập mật khẩu" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="name">Tên khách hàng *:</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Xin nhập họ và tên" required>
+                </div>
+                <div class="form-group">
+                    <label class="radio-inline"><input type="radio" name="sex" value="Nam" required>Nam</label>
+                    <label class="radio-inline"><input type="radio" name="sex" value="Nữ" required>Nữ</label>
+                </div>
+                <div class="form-group">
+                    <label for="address">Địa chỉ *:</label>
+                    <input type="text" class="form-control" id="address" name="address" placeholder="Xin nhập địa chỉ" required>
+                </div>
+                <div class="form-group">
+                    <label for="identicationNumber">Số CMND *:</label>
+                    <input type="number" class="form-control" id="identicationNumber" name="identicationNumber" placeholder="Xin nhập số CMND" required>
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber">Điện thoại liên lạc *:</label>
+                    <input type="number" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Xin nhập điện thoại liên lạc" required>
+                </div>
+                <button type="submit" class="btn btn-default">Đăng ký</button>
+                {{#if errorMessage}}
+                    <div class="alert alert-danger" style="margin-top: 10px;">
+                        {{errorMessage}}
+                    </div>
+                {{/if}}
+            </form>
+        </div>
+
+        <!-- ################################################################################################ -->
+    </section>
+</div>
