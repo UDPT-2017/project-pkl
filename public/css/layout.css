@@ -1,0 +1,8 @@
+a {
+  text-decoration: none!important;
+}
+
+a.drop img {
+  height: 30px;
+  width: 30px; 
+}
