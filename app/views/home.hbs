@@ -20,37 +20,7 @@
         <!-- ################################################################################################ -->
         <h2 class="font-x3 uppercase btmspace-80 underlined">Sự kiện <a href="#">Giảm giá</a></h2>
         <ul class="nospace group">
-            <li class="one_quarter first">
-                <div class="inspace-30 borderedbox">
-                    <h6 class="heading">Luctus nullam dapibus tellus eget</h6>
-                    <p>Convallis eros lobortis sollicitudin finibus nullam eu tincidunt orci aliquam lobortis id ipsum vehicula pulvinar aenean vulputate tempus ligula ut scelerisque.</p>
-                    <p class="nospace"><a href="#">Read More &raquo;</a></p>
-                </div>
-            </li>
-            <li class="one_quarter">
-                <article>
-                    <a href="#"><img class="btmspace-30" src="images/demo/320x220.png" alt=""></a>
-                    <h6 class="heading">Dignissim rutrum mauris augue</h6>
-                    <p>Dui porttitor a suspendisse pharetra urna in elit malesuada porta proin massa metus&hellip;</p>
-                    <p class="nospace"><a href="#">Read More &raquo;</a></p>
-                </article>
-            </li>
-            <li class="one_quarter">
-                <article>
-                    <a href="#"><img class="btmspace-30" src="images/demo/320x220.png" alt=""></a>
-                    <h6 class="heading">Nisi at molestie sapien mollis</h6>
-                    <p>Quis efficitur malesuada massa nunc tristique sit amet enim et morbi sodales purus in&hellip;</p>
-                    <p class="nospace"><a href="#">Read More &raquo;</a></p>
-                </article>
-            </li>
-            <li class="one_quarter">
-                <article>
-                    <a href="#"><img class="btmspace-30" src="images/demo/320x220.png" alt=""></a>
-                    <h6 class="heading">Vulputate quis lectus hendrerit nam</h6>
-                    <p>Dui convallis in ullamcorper convallis in sollicitudin dictum tellus eu fermentum lectus&hellip;</p>
-                    <p class="nospace"><a href="#">Read More &raquo;</a></p>
-                </article>
-            </li>
+            {{#saleoffHelper saleoff}}{{/saleoffHelper}}
         </ul>
         <!-- ################################################################################################ -->
         <!-- / main body -->
@@ -74,20 +44,7 @@
                 </ol>
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
-                    <div class="item active">
-                        <img src="ligerrat/images/demo/gallery/dalat1.jpg" alt="New York">
-                        <div class="carousel-caption">
-                            <h3>New York</h3>
-                            <p>We love the Big Apple!</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="ligerrat/images/demo/gallery/dalat1.jpg" alt="New York">
-                        <div class="carousel-caption">
-                            <h3>New York</h3>
-                            <p>We love the Big Apple!</p>
-                        </div>
-                    </div>
+                  {{#carousel images}}{{/carousel}}
                 </div>
                 <!-- Left and right controls -->
                 <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -111,39 +68,7 @@
         <!-- ################################################################################################ -->
         <h2 class="font-x3 uppercase btmspace-80 underlined">Tin tức <a href="#">Mới</a></h2>
         <ul class="nospace elements">
-            <li class="one_third first">
-                <article>
-                    <a href="#"><img src="images/demo/320x220.png" alt=""></a>
-                    <div class="txtwrap">
-                        <h6 class="heading">Facilisis proin in</h6>
-                        <time datetime="2045-04-06">6<sup>th</sup> April 2045</time>
-                        <p>Dictum tempus nulla eros posuere arcu ut mattis lectus nisi vel nulla&hellip;</p>
-                        <footer><a href="#">Read More &raquo;</a></footer>
-                    </div>
-                </article>
-            </li>
-            <li class="one_third">
-                <article>
-                    <a href="#"><img src="images/demo/320x220.png" alt=""></a>
-                    <div class="txtwrap">
-                        <h6 class="heading">Tristique nisl mauris</h6>
-                        <time datetime="2045-04-05">5<sup>th</sup> April 2045</time>
-                        <p>Odio vitae fringilla lacus habitant morbi tristique senectus et netus&hellip;</p>
-                        <footer><a href="#">Read More &raquo;</a></footer>
-                    </div>
-                </article>
-            </li>
-            <li class="one_third">
-                <article>
-                    <a href="#"><img src="images/demo/320x220.png" alt=""></a>
-                    <div class="txtwrap">
-                        <h6 class="heading">Finibus purus id</h6>
-                        <time datetime="2045-04-04">4<sup>th</sup> April 2045</time>
-                        <p>Turpis egestas phasellus vulputate ac dolor ac elementum nullam leo&hellip;</p>
-                        <footer><a href="#">Read More &raquo;</a></footer>
-                    </div>
-                </article>
-            </li>
+          {{#newsHelper news}}{{/newsHelper}}
         </ul>
         <!-- ################################################################################################ -->
     </section>
@@ -196,21 +121,13 @@
         <div class="one_third">
             <h6 class="title">Tin tức</h6>
             <ul class="nospace linklist">
-                <li><a href="#">hendrerit risus nulla consectetur</a></li>
-                <li><a href="#">sapien a tempor neque faucibus vitae</a></li>
-                <li><a href="#">vestibulum nisi sed orci condimentum</a></li>
-                <li><a href="#">faucibus ligula facilisis phasellus</a></li>
-                <li><a href="#">venenatis mauris vel varius tincidunt</a></li>
+                {{#newsLink news}}{{/newsLink}}
             </ul>
         </div>
         <div class="one_third">
             <h6 class="title">SỰ KIỆN</h6>
             <ul class="nospace linklist">
-                <li><a href="#">non fusce quis dictum vitae accumsan</a></li>
-                <li><a href="#">erat in hac habitasse platea dictumst</a></li>
-                <li><a href="#">sed mi arcu mattis gravida feugiat</a></li>
-                <li><a href="#">aliquam nunc etiam neque lobortis</a></li>
-                <li><a href="#">tristique integer nunc eget dictum</a></li>
+                {{#saleoffLink saleoff}}{{/saleoffLink}}
             </ul>
         </div>
         <!-- ################################################################################################ -->

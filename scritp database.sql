@@ -7,18 +7,20 @@ create table KHUYENMAI
 	NgayKetThuc date,
 	HinhThucKhuyenMai varchar(50),
 	TyLeGiamGia integer,
-	MoTaKhuyenMai text
+	MoTaKhuyenMai text,
+	AnhKhuyenMai varchar(100)
 )
 
 --Tạo bảng tin tức
 create table TINTUC
 (
 	MaTinTuc serial primary key,
-	TieuDeTinTuc varchar(100),
+	TieuDeTinTuc text,
 	NgayDangTinTuc timestamp,
 	NoiDungTomTat text,
 	NoiDungTinTuc text,
-	SoLuocLike integer
+	SoLuocLike integer,
+	AnhDaiDienTinTuc varchar(100)
 )
 
 --Các comments của tin tức
@@ -35,9 +37,10 @@ create table TINTUC_COMMENTS
 --Tạo bảng gallery chứa các hình ảnh
 create table GALLERY
 (
-	LinkHA varchar(30) primary key,
-	DiaDiem varchar(50),
-	MoTa varchar(100)
+	MaHinhAnh serial primary key,
+	LinkHA varchar(100),
+	DiaDiem varchar(200),
+	MoTa text
 )
 
 --Tạo bảng PHUONGTHUCTHANHTOAN
@@ -335,7 +338,21 @@ values('VE004',200000,0,0,'KH004',NULL,NULL,'2017-06-07',NULL,'A1','XE002','CD00
 
 --================================================================================
 insert into KHUYENMAI
-values('MKM001',N'Khuyến Mãi Sinh Nhật Phương Trang','2017-06-01','2017-06-20',N'Giảm giá',10);
+values('MKM001',N'Khuyến Mãi Sinh Nhật Phương Trang','2017-06-01','2017-06-20',N'Giảm giá',10, 'Sinh nhật lần thứ 20 của Phương Trang', 'images/khuyenmai/khuyenmai1.jpg');
+insert into KHUYENMAI
+values('MKM002',N'Khuyến Mãi Tết','2017-06-01','2017-06-20',N'Giảm giá',10, 'Khuyến mãi dịp tết năm nay 2017', 'images/khuyenmai/khuyenmai2.jpg');
+insert into KHUYENMAI
+values('MKM003',N'Khuyến Mãi Giáng sinh','2017-06-01','2017-06-20',N'Giảm giá',10, 'Vui mừng giáng sinh năm nay, Phương trang khuyến mãi cho khách hàng', 'images/khuyenmai/khuyenmai3.jpg');
+insert into KHUYENMAI
+values('MKM004',N'Khuyến Mãi ngày của mẹ','2017-06-01','2017-06-20',N'Giảm giá',10, 'Nhân dịp ngày của mẹ, Phương Trang xin khuyến mãi cho khách hàng', 'images/khuyenmai/khuyenmai4.jpg');
+insert into KHUYENMAI
+values('MKM005',N'Khuyến Mãi Halloween','2017-06-01','2017-06-20',N'Giảm giá',10, 'Cùng hù dọa nhau cùng với Phương Trang trong dịp lễ Halloween năm nay', 'images/khuyenmai/khuyenmai5.jpg');
+insert into KHUYENMAI
+values('MKM006',N'Khuyến Mãi happy new year','2017-06-01','2017-06-20',N'Giảm giá',10, 'Vui mừng Tết tây năm nay Phương trang khuyến mãi cho khách hàng', 'images/khuyenmai/khuyenmai6.jpg');
+insert into KHUYENMAI
+values('MKM007',N'Khuyến Mãi ngày của cha','2017-06-01','2017-06-20',N'Giảm giá',10, 'Nhân dịp ngày của cha, Phương Trang xin khuyến mãi cho khách hàng', 'images/khuyenmai/khuyenmai7.jpg');
+insert into KHUYENMAI
+values('MKM008',N'Khuyến Mãi Valentine Day','2017-06-01','2017-06-20',N'Giảm giá',10, 'Chúc các cặp đôi mãi mãi hạnh phúc', 'images/khuyenmai/khuyenmai8.jpg');
 
 
 --================================================================================
@@ -345,3 +362,38 @@ values('MKM001','VE004');
 
 insert into KHUYENMAI_VE
 values('MKM001','VE001');
+
+--==============================================================================
+insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/hochiminh1.jpg', 'Thành phố hồ chí minh', ' Là thành phố hiện đại bậc nhất Việt Nam');
+insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/hochiminh2.jpg', 'Thành phố hồ chí minh', ' Là thành phố hiện đại bậc nhất Việt Nam');
+insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/hochiminh3.jpg', 'Thành phố hồ chí minh', ' Là thành phố hiện đại bậc nhất Việt Nam');
+insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/hochiminh4.jpg', 'Thành phố hồ chí minh', ' Là thành phố hiện đại bậc nhất Việt Nam');
+insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/hochiminh5.jpg', 'Thành phố hồ chí minh', ' Là thành phố hiện đại bậc nhất Việt Nam');
+insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/hochiminh6.jpg', 'Thành phố hồ chí minh', ' Là thành phố hiện đại bậc nhất Việt Nam');
+insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/hanoi1.jpg', 'Hà Nội', 'Là thủ đô, trái tim của Việt Nam');
+insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/hanoi2.jpg', 'Hà Nội', 'Là thủ đô, trái tim của Việt Nam');
+insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/hanoi3.jpg', 'Hà Nội', 'Là thủ đô, trái tim của Việt Nam');
+insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/hanoi4.jpg', 'Hà Nội', 'Là thủ đô, trái tim của Việt Nam');
+insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/hanoi5.jpg', 'Hà Nội', 'Là thủ đô, trái tim của Việt Nam');
+insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/hanoi6.jpg', 'Hà Nội', 'Là thủ đô, trái tim của Việt Nam');
+insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/danang1.jpg', 'Đà Nẵng', 'Là thành phố du lịch nổi tiếng nhất Việt Nam');
+insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/danang2.jpg', 'Đà Nẵng', 'Là thành phố du lịch nổi tiếng nhất Việt Nam');
+insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/danang3.jpg', 'Đà Nẵng', 'Là thành phố du lịch nổi tiếng nhất Việt Nam');
+insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/danang4.jpg', 'Đà Nẵng', 'Là thành phố du lịch nổi tiếng nhất Việt Nam');
+insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/danang5.jpg', 'Đà Nẵng', 'Là thành phố du lịch nổi tiếng nhất Việt Nam');
+insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/danang6.jpg', 'Đà Nẵng', 'Là thành phố du lịch nổi tiếng nhất Việt Nam');
+insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/dalat1.jpg', 'Đà Lạt', 'Là một địa điểm du lịch tuyệt đẹp với nhiều kiến trúc cổ và hoa');
+insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/dalat2.jpg', 'Đà Lạt', 'Là một địa điểm du lịch tuyệt đẹp với nhiều kiến trúc cổ và hoa');
+insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/dalat3.jpg', 'Đà Lạt', 'Là một địa điểm du lịch tuyệt đẹp với nhiều kiến trúc cổ và hoa');
+insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/dalat4.jpg', 'Đà Lạt', 'Là một địa điểm du lịch tuyệt đẹp với nhiều kiến trúc cổ và hoa');
+insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/dalat5.jpg', 'Đà Lạt', 'Là một địa điểm du lịch tuyệt đẹp với nhiều kiến trúc cổ và hoa');
+insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/dalat6.jpg', 'Đà Lạt', 'Là một địa điểm du lịch tuyệt đẹp với nhiều kiến trúc cổ và hoa');
+
+--===============================================================================================
+insert into TINTUC(TieuDeTinTuc,NgayDangTinTuc, NoiDungTomTat, NoiDungTinTuc, SoLuocLike, AnhDaiDienTinTuc) values('Phương Trang được nhà nước ban tạng giải thưởng vàng', '2017-06-10', 'Phương Trang được nhà nước ban tạng giải thưởng vàng', 'Phương Trang được nhà nước ban tạng giải thưởng vàng',  50, 'images/tintuc/tintuc6.png');
+insert into TINTUC(TieuDeTinTuc,NgayDangTinTuc, NoiDungTomTat, NoiDungTinTuc, SoLuocLike, AnhDaiDienTinTuc) values('Phương Trang mở thêm nhiều chuyến đường', '2017-06-12', 'Phương Trang mở thêm nhiều chuyến đường', 'Phương Trang mở thêm nhiều chuyến đường',  20, 'images/tintuc/tintuc3.png');
+insert into TINTUC(TieuDeTinTuc,NgayDangTinTuc, NoiDungTomTat, NoiDungTinTuc, SoLuocLike, AnhDaiDienTinTuc) values('Phương Trang tổ chức sinh nhật lần thứ 20', '2017-06-14', 'Phương Trang tổ chức sinh nhật lần thứ 20', 'Phương Trang tổ chức sinh nhật lần thứ 20',  50, 'images/tintuc/tintuc2.png');
+insert into TINTUC(TieuDeTinTuc,NgayDangTinTuc, NoiDungTomTat, NoiDungTinTuc, SoLuocLike, AnhDaiDienTinTuc) values('Phương Trang tặng phần thưởng cho học sinh nghèo', '2017-06-17', 'Phương Trang tặng phần thưởng cho học sinh nghèo', 'Phương Trang tặng phần thưởng cho học sinh nghèo',  50, 'images/tintuc/tintuc5.png');
+insert into TINTUC(TieuDeTinTuc,NgayDangTinTuc, NoiDungTomTat, NoiDungTinTuc, SoLuocLike, AnhDaiDienTinTuc) values('Phương Trang chiến thắng giải thưởng xe vàng', '2017-06-20', 'Phương Trang chiến thắng giải thưởng xe vàng', 'Phương Trang chiến thắng giải thưởng xe vàng',  50, 'images/tintuc/tintuc6.png');
+insert into TINTUC(TieuDeTinTuc,NgayDangTinTuc, NoiDungTomTat, NoiDungTinTuc, SoLuocLike, AnhDaiDienTinTuc) values('Phương Trang tăng lợi nhuận trong năm nay', '2017-06-21', 'Phương Trang tăng lợi nhuận trong năm nay', 'Phương Trang tăng lợi nhuận trong năm nay',  50, 'images/tintuc/tintuc3.png');
+insert into TINTUC(TieuDeTinTuc,NgayDangTinTuc, NoiDungTomTat, NoiDungTinTuc, SoLuocLike, AnhDaiDienTinTuc) values('Phương Trang mua thêm nhiều xe khách mới', '2017-06-25', 'Phương Trang mua thêm nhiều xe khách mới', 'Phương Trang mua thêm nhiều xe khách mới',  50, 'images/tintuc/tintuc1.png');
