@@ -4,5 +4,9 @@ a {
 
 a.drop img {
   height: 30px;
-  width: 30px; 
+  width: 30px;
+}
+font {
+  color:  rgb(33,33,33);
+  size: 25;
 }
