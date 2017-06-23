@@ -7,6 +7,7 @@ module.exports = function(app, passport) {
 
     var signIn = router()
         .post('/', passport.authenticate('local_signIn', {
+
                 successRedirect: '/',
                 failureRedirect: '/',
                 failureFlash: true
@@ -16,11 +17,18 @@ module.exports = function(app, passport) {
     var signUp = router()
       .get('/', controllers.signUp.index)
       .post('/', controllers.signUp.signUp);
+  
     var about = router()
       .get('/',controllers.about.index);
+
+    var Gallery = router()
+        .get('/', controllers.Gallery.index)
+        .post('/', controllers.Gallery.layDiaDiem);
+
 
     app.use('/about',about);
     app.use('/', home);
     app.use('/signIn', signIn);
     app.use('/signUp', signUp);
+    app.use('/Gallery', Gallery);
 };
