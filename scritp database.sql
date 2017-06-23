@@ -34,13 +34,22 @@ create table TINTUC_COMMENTS
 	MaTaiKhoan varchar(10)
 )
 
+--Tạo bảng địa điểm
+create table DiaDiem
+(
+	MaDiaDiem serial primary key,
+	TenDiaDiem varchar(100),
+	AnhDiaDiem varchar(100)
+)
+
 --Tạo bảng gallery chứa các hình ảnh
 create table GALLERY
 (
 	MaHinhAnh serial primary key,
 	LinkHA varchar(100),
 	DiaDiem varchar(200),
-	MoTa text
+	MoTa text,
+	MaDiaDiem integer references DIADIEM(MaDiaDiem)
 )
 
 --Tạo bảng PHUONGTHUCTHANHTOAN
@@ -364,30 +373,36 @@ insert into KHUYENMAI_VE
 values('MKM001','VE001');
 
 --==============================================================================
-insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/hochiminh1.jpg', 'Thành phố hồ chí minh', ' Là thành phố hiện đại bậc nhất Việt Nam');
-insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/hochiminh2.jpg', 'Thành phố hồ chí minh', ' Là thành phố hiện đại bậc nhất Việt Nam');
-insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/hochiminh3.jpg', 'Thành phố hồ chí minh', ' Là thành phố hiện đại bậc nhất Việt Nam');
-insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/hochiminh4.jpg', 'Thành phố hồ chí minh', ' Là thành phố hiện đại bậc nhất Việt Nam');
-insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/hochiminh5.jpg', 'Thành phố hồ chí minh', ' Là thành phố hiện đại bậc nhất Việt Nam');
-insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/hochiminh6.jpg', 'Thành phố hồ chí minh', ' Là thành phố hiện đại bậc nhất Việt Nam');
-insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/hanoi1.jpg', 'Hà Nội', 'Là thủ đô, trái tim của Việt Nam');
-insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/hanoi2.jpg', 'Hà Nội', 'Là thủ đô, trái tim của Việt Nam');
-insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/hanoi3.jpg', 'Hà Nội', 'Là thủ đô, trái tim của Việt Nam');
-insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/hanoi4.jpg', 'Hà Nội', 'Là thủ đô, trái tim của Việt Nam');
-insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/hanoi5.jpg', 'Hà Nội', 'Là thủ đô, trái tim của Việt Nam');
-insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/hanoi6.jpg', 'Hà Nội', 'Là thủ đô, trái tim của Việt Nam');
-insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/danang1.jpg', 'Đà Nẵng', 'Là thành phố du lịch nổi tiếng nhất Việt Nam');
-insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/danang2.jpg', 'Đà Nẵng', 'Là thành phố du lịch nổi tiếng nhất Việt Nam');
-insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/danang3.jpg', 'Đà Nẵng', 'Là thành phố du lịch nổi tiếng nhất Việt Nam');
-insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/danang4.jpg', 'Đà Nẵng', 'Là thành phố du lịch nổi tiếng nhất Việt Nam');
-insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/danang5.jpg', 'Đà Nẵng', 'Là thành phố du lịch nổi tiếng nhất Việt Nam');
-insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/danang6.jpg', 'Đà Nẵng', 'Là thành phố du lịch nổi tiếng nhất Việt Nam');
-insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/dalat1.jpg', 'Đà Lạt', 'Là một địa điểm du lịch tuyệt đẹp với nhiều kiến trúc cổ và hoa');
-insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/dalat2.jpg', 'Đà Lạt', 'Là một địa điểm du lịch tuyệt đẹp với nhiều kiến trúc cổ và hoa');
-insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/dalat3.jpg', 'Đà Lạt', 'Là một địa điểm du lịch tuyệt đẹp với nhiều kiến trúc cổ và hoa');
-insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/dalat4.jpg', 'Đà Lạt', 'Là một địa điểm du lịch tuyệt đẹp với nhiều kiến trúc cổ và hoa');
-insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/dalat5.jpg', 'Đà Lạt', 'Là một địa điểm du lịch tuyệt đẹp với nhiều kiến trúc cổ và hoa');
-insert into gallery (LinkHA, DiaDiem, MoTa) values('ligerrat/images/demo/gallery/dalat6.jpg', 'Đà Lạt', 'Là một địa điểm du lịch tuyệt đẹp với nhiều kiến trúc cổ và hoa');
+insert into DIADIEM (TenDiaDiem, AnhDiaDiem) values('Thành phố hồ chí minh', 'ligerrat/images/demo/gallery/hochiminh1.jpg');
+insert into DIADIEM (TenDiaDiem, AnhDiaDiem) values('Hà Nội', 'ligerrat/images/demo/gallery/hanoi1.jpg');
+insert into DIADIEM (TenDiaDiem, AnhDiaDiem) values('Đà Nẵng', 'ligerrat/images/demo/gallery/danang1.jpg');
+insert into DIADIEM (TenDiaDiem, AnhDiaDiem) values('Đà Lạt', 'ligerrat/images/demo/gallery/dalat1.jpg');
+
+--==============================================================================
+insert into gallery (LinkHA, DiaDiem, MoTa, MaDiaDiem) values('ligerrat/images/demo/gallery/hochiminh1.jpg', 'Thành phố hồ chí minh', ' Là thành phố hiện đại bậc nhất Việt Nam', 1);
+insert into gallery (LinkHA, DiaDiem, MoTa, MaDiaDiem) values('ligerrat/images/demo/gallery/hochiminh2.jpg', 'Thành phố hồ chí minh', ' Là thành phố hiện đại bậc nhất Việt Nam', 1);
+insert into gallery (LinkHA, DiaDiem, MoTa, MaDiaDiem) values('ligerrat/images/demo/gallery/hochiminh3.jpg', 'Thành phố hồ chí minh', ' Là thành phố hiện đại bậc nhất Việt Nam', 1);
+insert into gallery (LinkHA, DiaDiem, MoTa, MaDiaDiem) values('ligerrat/images/demo/gallery/hochiminh4.jpg', 'Thành phố hồ chí minh', ' Là thành phố hiện đại bậc nhất Việt Nam', 1);
+insert into gallery (LinkHA, DiaDiem, MoTa, MaDiaDiem) values('ligerrat/images/demo/gallery/hochiminh5.jpg', 'Thành phố hồ chí minh', ' Là thành phố hiện đại bậc nhất Việt Nam', 1);
+insert into gallery (LinkHA, DiaDiem, MoTa, MaDiaDiem) values('ligerrat/images/demo/gallery/hochiminh6.jpg', 'Thành phố hồ chí minh', ' Là thành phố hiện đại bậc nhất Việt Nam', 1);
+insert into gallery (LinkHA, DiaDiem, MoTa, MaDiaDiem) values('ligerrat/images/demo/gallery/hanoi1.jpg', 'Hà Nội', 'Là thủ đô, trái tim của Việt Nam', 2);
+insert into gallery (LinkHA, DiaDiem, MoTa, MaDiaDiem) values('ligerrat/images/demo/gallery/hanoi2.jpg', 'Hà Nội', 'Là thủ đô, trái tim của Việt Nam', 2);
+insert into gallery (LinkHA, DiaDiem, MoTa, MaDiaDiem) values('ligerrat/images/demo/gallery/hanoi3.jpg', 'Hà Nội', 'Là thủ đô, trái tim của Việt Nam', 2);
+insert into gallery (LinkHA, DiaDiem, MoTa, MaDiaDiem) values('ligerrat/images/demo/gallery/hanoi4.jpg', 'Hà Nội', 'Là thủ đô, trái tim của Việt Nam', 2);
+insert into gallery (LinkHA, DiaDiem, MoTa, MaDiaDiem) values('ligerrat/images/demo/gallery/hanoi5.jpg', 'Hà Nội', 'Là thủ đô, trái tim của Việt Nam', 2);
+insert into gallery (LinkHA, DiaDiem, MoTa, MaDiaDiem) values('ligerrat/images/demo/gallery/hanoi6.jpg', 'Hà Nội', 'Là thủ đô, trái tim của Việt Nam', 2);
+insert into gallery (LinkHA, DiaDiem, MoTa, MaDiaDiem) values('ligerrat/images/demo/gallery/danang1.jpg', 'Đà Nẵng', 'Là thành phố du lịch nổi tiếng nhất Việt Nam', 3);
+insert into gallery (LinkHA, DiaDiem, MoTa, MaDiaDiem) values('ligerrat/images/demo/gallery/danang2.jpg', 'Đà Nẵng', 'Là thành phố du lịch nổi tiếng nhất Việt Nam', 3);
+insert into gallery (LinkHA, DiaDiem, MoTa, MaDiaDiem) values('ligerrat/images/demo/gallery/danang3.jpg', 'Đà Nẵng', 'Là thành phố du lịch nổi tiếng nhất Việt Nam', 3);
+insert into gallery (LinkHA, DiaDiem, MoTa, MaDiaDiem) values('ligerrat/images/demo/gallery/danang4.jpg', 'Đà Nẵng', 'Là thành phố du lịch nổi tiếng nhất Việt Nam', 3);
+insert into gallery (LinkHA, DiaDiem, MoTa, MaDiaDiem) values('ligerrat/images/demo/gallery/danang5.jpg', 'Đà Nẵng', 'Là thành phố du lịch nổi tiếng nhất Việt Nam', 3);
+insert into gallery (LinkHA, DiaDiem, MoTa, MaDiaDiem) values('ligerrat/images/demo/gallery/danang6.jpg', 'Đà Nẵng', 'Là thành phố du lịch nổi tiếng nhất Việt Nam', 3);
+insert into gallery (LinkHA, DiaDiem, MoTa, MaDiaDiem) values('ligerrat/images/demo/gallery/dalat1.jpg', 'Đà Lạt', 'Là một địa điểm du lịch tuyệt đẹp với nhiều kiến trúc cổ và hoa', 4);
+insert into gallery (LinkHA, DiaDiem, MoTa, MaDiaDiem) values('ligerrat/images/demo/gallery/dalat2.jpg', 'Đà Lạt', 'Là một địa điểm du lịch tuyệt đẹp với nhiều kiến trúc cổ và hoa', 4);
+insert into gallery (LinkHA, DiaDiem, MoTa, MaDiaDiem) values('ligerrat/images/demo/gallery/dalat3.jpg', 'Đà Lạt', 'Là một địa điểm du lịch tuyệt đẹp với nhiều kiến trúc cổ và hoa', 4);
+insert into gallery (LinkHA, DiaDiem, MoTa, MaDiaDiem) values('ligerrat/images/demo/gallery/dalat4.jpg', 'Đà Lạt', 'Là một địa điểm du lịch tuyệt đẹp với nhiều kiến trúc cổ và hoa', 4);
+insert into gallery (LinkHA, DiaDiem, MoTa, MaDiaDiem) values('ligerrat/images/demo/gallery/dalat5.jpg', 'Đà Lạt', 'Là một địa điểm du lịch tuyệt đẹp với nhiều kiến trúc cổ và hoa', 4);
+insert into gallery (LinkHA, DiaDiem, MoTa, MaDiaDiem) values('ligerrat/images/demo/gallery/dalat6.jpg', 'Đà Lạt', 'Là một địa điểm du lịch tuyệt đẹp với nhiều kiến trúc cổ và hoa', 4);
 
 --===============================================================================================
 insert into TINTUC(TieuDeTinTuc,NgayDangTinTuc, NoiDungTomTat, NoiDungTinTuc, SoLuocLike, AnhDaiDienTinTuc) values('Phương Trang được nhà nước ban tạng giải thưởng vàng', '2017-06-10', 'Phương Trang được nhà nước ban tạng giải thưởng vàng', 'Phương Trang được nhà nước ban tạng giải thưởng vàng',  50, 'images/tintuc/tintuc6.png');

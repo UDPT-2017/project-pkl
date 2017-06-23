@@ -7,17 +7,22 @@ module.exports = function(app, passport) {
 
     var signIn = router()
         .post('/', passport.authenticate('local_signIn', {
-                successRedirect: '/',
-                failureRedirect: '/',
-                failureFlash: true 
-            }))
+            successRedirect: '/',
+            failureRedirect: '/',
+            failureFlash: true
+        }))
         .get('/signOut', controllers.signIn.index);
 
     var signUp = router()
-      .get('/', controllers.signUp.index)
-      .post('/', controllers.signUp.signUp);
+        .get('/', controllers.signUp.index)
+        .post('/', controllers.signUp.signUp);
+
+    var Gallery = router()
+        .get('/', controllers.Gallery.index)
+        .post('/', controllers.Gallery.layDiaDiem);
 
     app.use('/', home);
     app.use('/signIn', signIn);
     app.use('/signUp', signUp);
+    app.use('/Gallery', Gallery);
 };

@@ -1,0 +1,49 @@
+<!-- Page Content -->
+<div class="container-fluid" style="background-image: url('ligerrat/images/demo/backgrounds/Wooden.jpg')">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Gallery</h1>
+        </div>
+
+        <div class="row" id="images">
+            {{#each diadiem}}
+                <div class="col-lg-3 col-md-4 col-xs-6">
+                    <p>{{this.tendiadiem}}</p>
+                    <a class="thumbnail" id="{{this.madiadiem}}">
+                        <img class="img-responsive" src="{{this.anhdiadiem}}" alt="">
+                    </a>
+                </div>
+            {{/each}}
+        </div>
+        <div class="row" id="btnback">
+        </div>
+    </div>
+</div>
+<script>
+    {{#each diadiem}}
+      $("#{{this.madiadiem}}").click(function() {
+          var madiadiem = $("#{{this.madiadiem}}").attr('id');
+
+          $.post("/Gallery", {
+              madiadiem: madiadiem
+          }, function(result) {
+              if (result.error) {
+                  alert('Có lỗi xảy ra');
+              } else {
+                  $("#images").empty();
+
+                  var i = 0;
+
+                  console.log(result.result);
+
+                  for (i = 0; i < result.result.length; i++) {
+                      $("#images").append("<div class=\"col-lg-3 col-md-4 col-xs-6\"><p>" + result.result[i].diadiem + "</p><a class=\"thumbnail\"><img class=\"img-responsive\" src=\"" + result.result[i].linkha +
+                          "\" alt=\"\"></a></div>");
+                  }
+
+                  $("#btnback").append("<a class=\"btn btn-primary\" href=\"\/Gallery\" style=\"margin: 35px;\">Trở về</a>");
+              }
+          });
+      });
+    {{/each}}
+</script>
