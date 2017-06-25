@@ -1,0 +1,58 @@
+<!-- Page Content -->
+<div class="container-fluid" style="background-image: url('ligerrat/images/demo/backgrounds/Wooden.jpg')">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Trang Tin Tuc</h1>
+        </div>
+        <div class="row" id="images">
+            {{#each tintuc}}
+            <font>
+                <div class="col-lg-3 col-md-5 col-xs-6">
+                      <h2> {{this.tieudetintuc}} </h2>
+                    <p>
+                      {{this.ngaydangtintuc}} <br>
+                      {{this.noidungtomtat}}
+                    </p>
+                    <a class="thumbnail" id="{{this.matintuc}}">
+                        <img class="img-responsive" src="{{this.anhdaidientintuc}}" alt="">
+                    </a>
+                </div>
+              </font>
+            {{/each}}
+        </div>
+        <div class="container" id="comment"></div>
+        <div class="row" id="btnback">
+        </div>
+    </div>
+</div>
+
+
+<script>
+    {{#each tintuc}}
+      $("#{{this.matintuc}}").click(function() {
+          var matintuc = $("#{{this.matintuc}}").attr('id');
+          $.post("/tintuc", {
+              matintuc: matintuc
+          }, function(result) {
+              if (result.error) {
+                  alert('Có lỗi xảy ra');
+              } else {
+                  $("#images").empty(); //Làm rỗng
+                  var i = 0;
+                  console.log(result.result);
+
+                  for (i = 0; i < result.result.length; i++) {
+                      $("#images").append("<div class=\"container\">  <h1 style=\"font-size:50px; color:  rgb(238,255,238);\">" + result.result[i].tieudetintuc + "</h1> <p style=\" font-size:large;color:  rgb(238,255,238);\">" + result.result[i].noidungtintuc + "</p><a><img style =\"width:100%;heigt:100%; \" class=\"img-responsive\" src=\"" + result.result[i].anhdaidientintuc +
+                          "\" alt=\"\"></a></div>");
+                  }
+                  console.log(result.result2);
+                  for(i = 0; i<result.result2.length;i++){
+                    $("#comment").append("<div class=\"row\"><div class=\"col-sm-2\"> <div class=\"thumbnail1\"> <img class=\"img-responsive user-photo\" src=\"" + result.result2[i].avartar+ "\"> </div> </div> <div class=\"col-sm-5\"> <div class=\"panel panel-default\"><div class=\"panel-heading\"> <strong>" + result.result2[i].tendangnhap + "</strong></div> <div class=\"panel-body\"> "+result.result2[i].noidungcomment +"</div> </div></div></div>");
+                  }
+
+                  $("#btnback").append("<a class=\"btn btn-primary\" href=\"\/tintuc\" style=\"margin: 35px;\">Trở về</a>");
+              }
+          });
+      });
+    {{/each}}
+</script>

@@ -17,13 +17,16 @@ module.exports = function(app, passport) {
     var signUp = router()
       .get('/', controllers.signUp.index)
       .post('/', controllers.signUp.signUp);
-  
+
     var about = router()
       .get('/',controllers.about.index);
 
     var Gallery = router()
         .get('/', controllers.Gallery.index)
         .post('/', controllers.Gallery.layDiaDiem);
+    var tintuc = router()
+        .get('/',controllers.tintuc.index)
+        .post('/',controllers.tintuc.laytintuc);
 
 
     app.use('/about',about);
@@ -31,4 +34,5 @@ module.exports = function(app, passport) {
     app.use('/signIn', signIn);
     app.use('/signUp', signUp);
     app.use('/Gallery', Gallery);
+    app.use('/tintuc',tintuc);
 };
