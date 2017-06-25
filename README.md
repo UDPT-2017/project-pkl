@@ -22,7 +22,7 @@ Làm việc nhóm:
 * [ ] Sử dụng GIT theo Gitflow Workflow.
 
 ## Mô tả nghiệp vụ chung ứng dụng
-Thể hiện thông tin của website của công ty , cho phép khách hàng đăng kí, đăng nhập vào hệ thống, xem các thông tin của công ty, tin tức của công ty.
+Thể hiện thông tin của website của công ty , cho phép khách hàng đăng kí, đăng nhập vào hệ thống, xem các thông tin của công ty, tin tức của công ty. Xem thông tin vé đã đặt. Xem thông tin khách hàng sau khi đăng nhập.
 
 ## Lập trình server
 ### MVC
@@ -70,20 +70,27 @@ Liệt kê các API nhóm đã sử dụng được ở đây
 Các **yêu cầu chức năng** (check và ghi MSSV vào các phần chức năng đã thực hiện)
 * [x] Đăng kí tài khoản mới.Hash password thông qua passport trước khi ghi xuống DB (1412414)
 * [x] Thiết kế trang chủ , navbar (1412414)
-* [x] Quản lý thư viện gallery, có sử dụng ajax để thể hiện các album ảnh (1412414)
+* [x] Quản lý thư viện gallery, có sử dụng ajax để thể hiện các album ảnh khi chọn 1 thumbnail ảnh bất kì (1412414)
 * [x] Xem thông tin khách hàng, sử dụng AJAX  sửa thông tin khách hàng  (1412414)
 * [x] Thiết kế trang thông tin liên hệ, thể hiện vị trí của công ty thông qua google api (1412278)
-* [x] Thiết kế trang tin tức, sử dụng AJAX để chuyển sang trang tin tức cụ thể. (1412278)
-* [x]
-* [x]
+* [x] Thiết kế trang tin tức, sử dụng AJAX để chuyển sang trang tin tức cụ thể, thể hiện các comment có trong bài đăng. (1412278)
+* [x] Xem thông tin vé đã đặt (1412274)
+* [x] Deploy trang web lên heroku (1412414)
 * [x]
 
 
 ## Demo
 
 Link ảnh GIF demo ứng dụng:
+* Demo trang thông tin liên hệ khi chưa đăng nhập (1412278)
+![Video Walkthrough](https://github.com/UDPT-2017/project-pkl/blob/master/demo/1412278_About_codangnhap.gif)
+* Demo trang thông tin liên hệ khi đã đăng nhập (1412278)
+![Video Walkthrough](https://github.com/UDPT-2017/project-pkl/blob/master/demo/1412278_About_khongdangnhap.gif)
+* Demo trang tin tức khi chưa đăng nhập (1412278)
+![Video Walkthrough](https://github.com/UDPT-2017/project-pkl/blob/Lam_TinTuc/demo/1412278_tintuc_khongdangnhap.gif)
 
-![Video Walkthrough](demo.gif)
+* Demo trang tin tức sau khi đăng nhập (1412278)
+![Video Walkthrough](https://github.com/UDPT-2017/project-pkl/blob/Lam_TinTuc/demo/1412278_tintuc_codangnhap.gif)
 
 Tạo ảnh GIF với chương trình [LiceCap](http://www.cockos.com/licecap/).
 
