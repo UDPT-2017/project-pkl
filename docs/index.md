@@ -3,7 +3,7 @@
 **Trang Thông Tin Phương Trang** là repository cho đồ án nhóm. Nhóm tối đa 4 thành viên.
 
 Thành viên:
-* [x] **1412274** - Nguyễn Hoàng Kim -1412274-NHKim- email - 30%
+* [x] **1412274** - Nguyễn Hoàng Kim -1412274-NHKim- nhkim1496@gmail.com - 30%
 * [x] **1412278** - Phan Khánh Lâm - lam0196vn- lam0196vn@gmail.com - 30%
 * [x] **1412414** - Vương Thiên Phú - 1412414 - thienphuvuong@gmail.com - 40%
 
