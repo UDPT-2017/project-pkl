@@ -28,7 +28,6 @@ var ve_controller = {
                             title: 'Xem vé',
                         });
                     } else {
-                        console.log('here');
                         res.render('xem_ve', {
                             layout: 'client_layout',
                             title: 'Xem vé',
