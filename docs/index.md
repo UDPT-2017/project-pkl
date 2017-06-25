@@ -83,14 +83,14 @@ Các **yêu cầu chức năng** (check và ghi MSSV vào các phần chức nă
 
 Link ảnh GIF demo ứng dụng:
 * Demo trang thông tin liên hệ khi chưa đăng nhập (1412278)
-![Video Walkthrough](https://github.com/UDPT-2017/project-pkl/blob/master/demo/1412278_About_codangnhap.gif)
+![Alt Text](https://github.com/UDPT-2017/project-pkl/blob/master/demo/1412278_About_codangnhap.gif)
 * Demo trang thông tin liên hệ khi đã đăng nhập (1412278)
-![Video Walkthrough](https://github.com/UDPT-2017/project-pkl/blob/master/demo/1412278_About_khongdangnhap.gif)
+![Alt Text](https://github.com/UDPT-2017/project-pkl/blob/master/demo/1412278_About_khongdangnhap.gif)
 * Demo trang tin tức khi chưa đăng nhập (1412278)
-![Video Walkthrough](https://github.com/UDPT-2017/project-pkl/blob/Lam_TinTuc/demo/1412278_tintuc_khongdangnhap.gif)
+![Alt Text](https://github.com/UDPT-2017/project-pkl/blob/Lam_TinTuc/demo/1412278_tintuc_khongdangnhap.gif)
 
 * Demo trang tin tức sau khi đăng nhập (1412278)
-![Video Walkthrough](https://github.com/UDPT-2017/project-pkl/blob/Lam_TinTuc/demo/1412278_tintuc_codangnhap.gif)
+![Alt Text](https://github.com/UDPT-2017/project-pkl/blob/Lam_TinTuc/demo/1412278_tintuc_codangnhap.gif)
 
 Tạo ảnh GIF với chương trình [LiceCap](http://www.cockos.com/licecap/).
 
