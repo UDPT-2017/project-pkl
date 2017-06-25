@@ -1,4 +1,4 @@
-<div class="container-fluid collapse" id="signInForm" style="background-image:url('ligerrat/images/demo/backgrounds/Wooden.jpg');">
+<div class="container-fluid collapse" id="signInForm" style="background-image:url('/ligerrat/images/demo/backgrounds/Wooden.jpg');">
     <div class="container">
         <h4>Đăng nhập</h4>
         <form method="post" action="/signIn">
@@ -14,7 +14,7 @@
                 <label><input type="checkbox">Nhớ tên đăng nhập và mật khẩu</label>
             </div>
             <button type="submit" class="btn btn-default">Đăng nhập</button>
-            {{#if message}}  
+            {{#if message}}
                 <script>alert('{{message}}')</script>
             {{/if}}
         </form>

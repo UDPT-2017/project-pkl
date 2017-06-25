@@ -1,0 +1,28 @@
+   <div class="container-fluid" style="background-image: url('/ligerrat/images/demo/backgrounds/Wooden.jpg')">
+        <div class="container">
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Mã vé</th>
+                    <th>Giá vé thực</th>
+                    <th>Trạng thái vé</th>
+                    <th>Trạng thái thanh toán</th>
+                    <th>Mã vé</th>
+                    <th>Mã xe</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {{#each result}}
+                      <tr>
+                        <td>{{this.mave}}</td>
+                        <td>{{this.giavethuc}}</td>
+                        <td>{{this.trangthaive}}</td>
+                        <td>{{this.trangthaithanhtoan}}</td>
+                        <td>{{this.mave}}</td>
+                        <td>{{this.maxe}}</td>
+                      </tr>
+                  {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>

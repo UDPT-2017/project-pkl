@@ -6,9 +6,9 @@ var galleryHelper = {
       active1: 'active',
       diadiem: diadiem,
       message: message,
-      user: user, 
+      user: user,
       avartar: avartar,
-      css: 'gallery.css'
+      css: 'css/gallery.css'
     });
   },
   index: function(error, result, req, res) {

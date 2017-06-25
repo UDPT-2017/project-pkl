@@ -5,7 +5,7 @@ var flash = require('connect-flash');
 
 module.exports = function(app, passport, express) {
     app.use(express.static('public'));
-
+    
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({
         extended: true

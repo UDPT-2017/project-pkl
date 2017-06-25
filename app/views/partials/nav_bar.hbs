@@ -1,18 +1,18 @@
-<nav id="mainav" class="fl_right">
+﻿<nav id="mainav" class="fl_right">
     <ul class="clear">
         <li class="{{active1}}"><a href="/">Trang chủ</a></li>
         <li class="{{active2}}"><a href="#">Khuyến mãi</a></li>
         <li class="{{active3}}"><a href="/tintuc">Tin tức</a></li>
         {{#if user}}
             <li><a href="/signIn/signOut">Đăng xuất</a></li>
-            <li><a class="drop"><img src="{{avartar}}" alt="Avartar" class="profile-image img-circle"> Xin chào, {{user}}</a>
+            <li><a class="drop" style="cursor:pointer"><img src="{{avartar}}" alt="Avartar" class="profile-image img-circle"> Xin chào, {{user}}</a>
                 <ul>
-                    <li><a href="#">Xem thông tin</a></li>
-                    <li><a href="#">Vé đã đặt</a></li>
+                    <li><a href="/XemThongTin/{{user}}">Xem thông tin</a></li>
+                    <li><a href="/xem_ve/{{user}}">Vé đã đặt</a></li>
                 </ul>
             </li>
         {{else}}
-            <li><a data-toggle="collapse" data-target="#signInForm">Đăng nhập</a></li>
+            <li><a data-toggle="collapse" data-target="#signInForm" style="cursor:pointer">Đăng nhập</a></li>
             <li class="{{active4}}"><a href="/signUp">Đăng ký</a></li>
         {{/if}}
         <li class="{{active5}}"><a href="/about">Giới thiệu</a></li>
