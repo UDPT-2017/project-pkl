@@ -1,12 +1,12 @@
-# Project - *Name of your app*
+# Project - *Webstite Phương Trang*
 
-**Name of your app** là repository cho đồ án nhóm. Nhóm tối đa 4 thành viên.
+**Trang Thông Tin Phương Trang** là repository cho đồ án nhóm. Nhóm tối đa 4 thành viên.
 
 Thành viên:
-* [ ] **MSSV1** - Tên sinh viên 1 - tên tài khoản github - email - Tỉ lệ đóng góp cho đề tài
-* [ ] **MSSV2** - Tên sinh viên 2 - tên tài khoản github - email - Tỉ lệ đóng góp cho đề tài
-* [ ] **MSSV3** - Tên sinh viên 3 - tên tài khoản github - email - Tỉ lệ đóng góp cho đề tài
-* [ ] **MSSV4** - Tên sinh viên 4 - tên tài khoản github - email - Tỉ lệ đóng góp cho đề tài
+* [x] **1412274** - Nguyễn Hoàng Kim -1412274-NHKim- email - Tỉ lệ đóng góp cho đề tài
+* [x] **1412278** - Phan Khánh Lâm - lam0196vn- lam0196vn@gmail.com - Tỉ lệ đóng góp cho đề tài
+* [x] **1412414** - Vương Thiên Phú - 1412414 - thienphuvuong@gmail.com - Tỉ lệ đóng góp cho đề tài
+
 
 URL: **URL hosting của đề tài**
 Báo cáo: **URL Github Page của đề tài**
@@ -16,26 +16,26 @@ Báo cáo: **URL Github Page của đề tài**
 Trong đề tài, sinh viên cần mô tả các chức năng có thể thực hiện bên dưới. Sinh viên check vào các mục bên dưới và ghi mã sinh viên đã làm vào chức năng theo mẫu. Mục nào ko có MSSV là tính điểm theo nhóm. Cần sắp xếp các chức năng bên dưới theo thứ tự MSSV đã thực hiện.
 
 Làm việc nhóm:
-* [ ] Có sử dụng GIT.
+* [x] Có sử dụng GIT.
 * [ ] Sử dụng GIT theo Centralized Workflow.
-* [ ] Sử dụng GIT theo Feature Branch Workflow.
+* [x] Sử dụng GIT theo Feature Branch Workflow.
 * [ ] Sử dụng GIT theo Gitflow Workflow.
 
 ## Mô tả nghiệp vụ chung ứng dụng
-Phần mô tả đặt vào đây
+Thể hiện thông tin của website của công ty , cho phép khách hàng đăng kí, đăng nhập vào hệ thống, xem các thông tin của công ty, tin tức của công ty.
 
 ## Lập trình server
 ### MVC
-* [ ] MVC (MSSV1)
-* [ ] Config (MSSV1)
+* [x] MVC (1412414,1412278,1412274)
+* [x] Config (1412414,1412274)
 * [ ] REST routing (MSSV1)
-* [ ] Layout & partial (MSSV1)
+* [x] Layout & partial (1412414)
 
 ### Lập trình dữ liệu
-* [ ] Thêm (MSSV1)
+* [x] Thêm (1412414)
 * [ ] Xóa (MSSV1)
-* [ ] Sửa (MSSV1)
-* [ ] Tìm kiếm (MSSV1)
+* [x] Sửa (1412414)
+* [x] Tìm kiếm (1412278,1412274,1412414)
 
 ### Xử lý lỗi
 * [ ] Xử lý lỗi trong cùng trang web (MSSV1)
@@ -47,17 +47,17 @@ Phần mô tả đặt vào đây
 ### Tương tác API khác
 Liệt kê các API nhóm đã sử dụng được ở đây
 * [ ] Facebook API: mô tả (MSSV1)
-* [ ] Google API: mô tả (MSSV1)
+* [x] Google API:sử dụng API google map để thể hiện vị trí trong trang liên hệ (1412278)
 * [ ] ...
 
 ## Lập trình client
-* [ ] Kiểm tra dữ liệu (MSSV1)
-* [ ] Animation (MSSV1)
+* [x] Kiểm tra dữ liệu (1412414)
+* [x] Animation (MSSV1)
 * [ ] Thao tác DOM (MSSV1)
-* [ ] AJAX (MSSV1)
+* [x] AJAX (1412274,1412278,1412414)
 
 ## Bảo mật
-* [ ] Chứng thực (MSSV1)
+* [x] Chứng thực (MSSV1)
 * [ ] Phân quyền sử dụng một số trang web với nhiều vai trò khác nhau (MSSV1)
    * [ ] Không cho phép thao tác vào trang web khi không có quyền (MSSV1)
    * [ ] Thể hiện các chức năng khác nhau trên cùng giao diện khi người dùng có quyền khác nhau (MSSV1)
@@ -68,7 +68,15 @@ Liệt kê các API nhóm đã sử dụng được ở đây
 
 ## Chức năng đã thực hiện
 Các **yêu cầu chức năng** (check và ghi MSSV vào các phần chức năng đã thực hiện)
-* [ ] Yêu cầu 1. (MSSV1)
+* [x] Đăng kí tài khoản mới.Hash password thông qua passport trước khi ghi xuống DB (1412414)
+* [x] Thiết kế trang chủ , navbar (1412414)
+* [x] Quản lý thư viện gallery, có sử dụng ajax để thể hiện các album ảnh (1412414)
+* [x] Xem thông tin khách hàng, sử dụng AJAX  sửa thông tin khách hàng  (1412414)
+* [x] Thiết kế trang thông tin liên hệ, thể hiện vị trí của công ty thông qua google api (1412278)
+* [x] Thiết kế trang tin tức, sử dụng AJAX để chuyển sang trang tin tức cụ thể. (1412278)
+* [x]
+* [x]
+* [x]
 
 
 ## Demo
