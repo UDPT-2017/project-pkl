@@ -3,5 +3,6 @@ module.exports = {
   signUp: require('./sign_up_controller'),
   signIn: require('./sign_in_controller'),
   about:  require('./about_controller'),
-  Gallery: require('./gallery_controller')
+  Gallery: require('./gallery_controller'),
+  XemThongTin: require('./xem_thong_tin_controller'),
 };

@@ -11,7 +11,7 @@ var homeHelper = {
             avartar: avartar,
             images: images,
             carousel: homeHelper.carousel,
-            css: 'home.css',
+            css: 'css/home.css',
             news: news,
             newsHelper: homeHelper.news,
             saleoff: saleoff,
