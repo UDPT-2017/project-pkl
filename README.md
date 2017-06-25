@@ -92,6 +92,8 @@ Link ảnh GIF demo ứng dụng:
 
 * Demo trang tin tức sau khi đăng nhập (1412278)
 ![Video Walkthrough](https://github.com/UDPT-2017/project-pkl/blob/Lam_TinTuc/demo/1412278_tintuc_codangnhap.gif)
+* Demo xem vé đã đặt (1412274)
+![Video Walkthrough](https://github.com/UDPT-2017/project-pkl/blob/Lam_TinTuc/demo/1412274_xemve.gif)
 
 Tạo ảnh GIF với chương trình [LiceCap](http://www.cockos.com/licecap/).
 
