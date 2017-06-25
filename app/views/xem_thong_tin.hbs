@@ -4,7 +4,7 @@
             <div class="col-sm-3 well">
                 <div class="well">
                     <p><a href="#">Ảnh đại diện</a></p>
-                    <img src="{{avartar}}" class="img-circle" height="65" width="65" alt="Avatar">
+                    <img src="{{avartar}}" id="avartar" class="img-circle" height="65" width="65" alt="Avatar">
                     <br />
                     <br />
                     <p><a>Tên đăng nhập</a></p>
@@ -175,6 +175,15 @@
                 data: formData,
                 contentType: false, // NEEDED, DON'T OMIT THIS (requires jQuery 1.6+)
                 processData: false, // NEEDED, DON'T OMIT THIS
+                success: function(result) {
+                  if (result.error) {
+                    alert('error');
+                  }
+                  else {
+                    console.log(result.image);
+                    $("#avartar").attr('src', result.image);
+                  }
+                }
             });
         } else {
             alert('Không hỗ trợ đuôi file này');
