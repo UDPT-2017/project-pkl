@@ -91,7 +91,8 @@ Link ảnh GIF demo ứng dụng:
 [Imgur](http://i.imgur.com/QNzrOna.gifv)
 * Demo trang tin tức sau khi đăng nhập (1412278)
 [Imgur](http://i.imgur.com/frs0soM.gifv)
-
+* Demo xem vé (1412274)
+[Imgur](http://i.imgur.com/n1D9oOz.gifv)
 Tạo ảnh GIF với chương trình [LiceCap](http://www.cockos.com/licecap/).
 
 
