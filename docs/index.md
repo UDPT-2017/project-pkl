@@ -93,8 +93,14 @@ Link ảnh GIF demo ứng dụng:
 [Imgur](http://i.imgur.com/frs0soM.gifv)
 * Demo xem vé (1412274)
 [Imgur](http://i.imgur.com/n1D9oOz.gifv)
-Tạo ảnh GIF với chương trình [LiceCap](http://www.cockos.com/licecap/).
-
+* Demo đăng kí đăng nhập, đăng xuất (1412414)
+[Imgur](http://i.imgur.com/oDNDbs2.gifv)
+* Demo lỗi đăng kí đăng nhập (1412414)
+[Imgur](http://i.imgur.com/ptzY4am.gifv)
+* Demo xem và sửa thông tin khách hàng (1412414)
+[Imgur](http://i.imgur.com/Mu2hVhF.gifv)
+* Demo gallery (1412414)
+[Imgur](http://i.imgur.com/9UaW3kR.gifv)
 
 ## License
 

@@ -94,7 +94,14 @@ Link ảnh GIF demo ứng dụng:
 ![Video Walkthrough](https://github.com/UDPT-2017/project-pkl/blob/Lam_TinTuc/demo/1412278_tintuc_codangnhap.gif)
 * Demo xem vé đã đặt (1412274)
 ![Video Walkthrough](https://github.com/UDPT-2017/project-pkl/blob/Lam_TinTuc/demo/1412274_xemve.gif)
-
+* Demo đăng kí đăng nhập, đăng xuất (1412414)
+![Video Walkthrough](https://github.com/UDPT-2017/project-pkl/blob/Lam_TinTuc/demo/1412414_dangky_dangnhap_dangxuat.gif)
+* Demo lỗi đăng kí đăng nhập (1412414)
+![Video Walkthrough](https://github.com/UDPT-2017/project-pkl/blob/Lam_TinTuc/demo/1412414_loi_dangky_dangnhap_dangxuat.gif)
+* Demo xem và sửa thông tin khách hàng (1412414)
+![Video Walkthrough](https://github.com/UDPT-2017/project-pkl/blob/Lam_TinTuc/demo/1412414_xem thongtin_thaydoi thongtin _ doianhdaidien.gif)
+* Demo gallery (1412414)
+![Video Walkthrough](https://github.com/UDPT-2017/project-pkl/blob/Lam_TinTuc/demo/1412414_gallery.gif)
 Tạo ảnh GIF với chương trình [LiceCap](http://www.cockos.com/licecap/).
 
 
