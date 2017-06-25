@@ -3,9 +3,9 @@
 **Trang Thông Tin Phương Trang** là repository cho đồ án nhóm. Nhóm tối đa 4 thành viên.
 
 Thành viên:
-* [x] **1412274** - Nguyễn Hoàng Kim -1412274-NHKim- email - Tỉ lệ đóng góp cho đề tài
-* [x] **1412278** - Phan Khánh Lâm - lam0196vn- lam0196vn@gmail.com - Tỉ lệ đóng góp cho đề tài
-* [x] **1412414** - Vương Thiên Phú - 1412414 - thienphuvuong@gmail.com - Tỉ lệ đóng góp cho đề tài
+* [x] **1412274** - Nguyễn Hoàng Kim -1412274-NHKim- email - 30%
+* [x] **1412278** - Phan Khánh Lâm - lam0196vn- lam0196vn@gmail.com - 30%
+* [x] **1412414** - Vương Thiên Phú - 1412414 - thienphuvuong@gmail.com - 40%
 
 
 URL: **URL hosting của đề tài**
@@ -84,13 +84,14 @@ Các **yêu cầu chức năng** (check và ghi MSSV vào các phần chức nă
 
 Link ảnh GIF demo ứng dụng:
 * Demo trang thông tin liên hệ khi chưa đăng nhập (1412278)
-[Imgur](http://i.imgur.com/6pY2biT.gifv)
+![](https://github.com/UDPT-2017/project-pkl/blob/master/demo/1412278_About_khongdangnhap.gif)
 * Demo trang thông tin liên hệ khi đã đăng nhập (1412278)
-[Imgur](http://i.imgur.com/C0RRRsj.gifv)
+![](https://github.com/UDPT-2017/project-pkl/blob/master/demo/1412278_About_codangnhap.gif)
 * Demo trang tin tức khi chưa đăng nhập (1412278)
-[Imgur](http://i.imgur.com/QNzrOna.gifv)
+![](https://github.com/UDPT-2017/project-pkl/blob/Lam_TinTuc/demo/1412278_tintuc_khongdangnhap.gif)
+
 * Demo trang tin tức sau khi đăng nhập (1412278)
-[Imgur](http://i.imgur.com/frs0soM.gifv)
+![](https://github.com/UDPT-2017/project-pkl/blob/Lam_TinTuc/demo/1412278_tintuc_codangnhap.gif)
 
 Tạo ảnh GIF với chương trình [LiceCap](http://www.cockos.com/licecap/).
 
