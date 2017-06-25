@@ -9,7 +9,7 @@ Thành viên:
 
 
 URL: **URL hosting của đề tài**
-Báo cáo: **URL Github Page của đề tài**
+Báo cáo: **https://udpt-2017.github.io/project-pkl/**
 
 ## Yêu cầu
 
