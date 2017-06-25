@@ -8,7 +8,7 @@ Thành viên:
 * [x] **1412414** - Vương Thiên Phú - 1412414 - thienphuvuong@gmail.com - 40%
 
 
-URL: **URL hosting của đề tài**
+URL: **https://projectpkl.herokuapp.com/**
 
 Báo cáo: **https://udpt-2017.github.io/project-pkl/**
 
