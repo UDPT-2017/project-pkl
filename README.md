@@ -8,7 +8,7 @@ Thành viên:
 * [x] **1412414** - Vương Thiên Phú - 1412414 - thienphuvuong@gmail.com - Tỉ lệ đóng góp cho đề tài
 
 
-URL: **URL hosting của đề tài**
+URL: **https://projectpkl.herokuapp.com/**
 Báo cáo: **https://udpt-2017.github.io/project-pkl/**
 
 ## Yêu cầu
@@ -53,11 +53,11 @@ Liệt kê các API nhóm đã sử dụng được ở đây
 ## Lập trình client
 * [x] Kiểm tra dữ liệu (1412414)
 * [x] Animation (MSSV1)
-* [ ] Thao tác DOM (MSSV1)
+* [x] Thao tác DOM (1412414)
 * [x] AJAX (1412274,1412278,1412414)
 
 ## Bảo mật
-* [x] Chứng thực (MSSV1)
+* [x] Chứng thực (1412414)
 * [ ] Phân quyền sử dụng một số trang web với nhiều vai trò khác nhau (MSSV1)
    * [ ] Không cho phép thao tác vào trang web khi không có quyền (MSSV1)
    * [ ] Thể hiện các chức năng khác nhau trên cùng giao diện khi người dùng có quyền khác nhau (MSSV1)
