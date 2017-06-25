@@ -34,16 +34,16 @@ var homeHelper = {
     news: function(news) {
         var i = 0;
 
-        var out = "<li class=\"one_third first\"><article><a href=\"#\"><img src=\"" + news[i].anhdaidientintuc + "\" alt=\"\"></a><div class=\"txtwrap\"><h6 class=\"heading\">" + news[i].tieudetintuc + "</h6><p>" + news[i].noidungtomtat + "</p><footer></footer></div></article></li>";
+        var out = "<li class=\"one_third first\"><article><a href=\"/tintuc\"><img src=\"" + news[i].anhdaidientintuc + "\" alt=\"\"></a><div class=\"txtwrap\"><h6 class=\"heading\">" + news[i].tieudetintuc + "</h6><p>" + news[i].noidungtomtat + "</p><footer></footer></div></article></li>";
 
         for (i = 1; i < 3; i++) {
-            out = out + "<li class=\"one_third\"><article><a href=\"#\"><img src=\"" + news[i].anhdaidientintuc + "\" alt=\"\"></a><div class=\"txtwrap\"><h6 class=\"heading\">" + news[i].tieudetintuc + "</h6><p>" + news[i].noidungtomtat + "</p><footer></footer></div></article></li>";
+            out = out + "<li class=\"one_third\"><article><a href=\"/tintuc\"><img src=\"" + news[i].anhdaidientintuc + "\" alt=\"\"></a><div class=\"txtwrap\"><h6 class=\"heading\">" + news[i].tieudetintuc + "</h6><p>" + news[i].noidungtomtat + "</p><footer></footer></div></article></li>";
         };
 
-        out = out + "<li class=\"one_third first\"><article><a href=\"#\"><img src=\"" + news[i].anhdaidientintuc + "\" alt=\"\"></a><div class=\"txtwrap\"><h6 class=\"heading\">" + news[i].tieudetintuc + "</h6><p>" + news[i].noidungtomtat + "</p><footer></footer></div></article></li>";
+        out = out + "<li class=\"one_third first\"><article><a href=\"/tintuc\"><img src=\"" + news[i].anhdaidientintuc + "\" alt=\"\"></a><div class=\"txtwrap\"><h6 class=\"heading\">" + news[i].tieudetintuc + "</h6><p>" + news[i].noidungtomtat + "</p><footer></footer></div></article></li>";
 
         for (i = 4; i < 6; i++) {
-            out = out + "<li class=\"one_third\"><article><a href=\"#\"><img src=\"" + news[i].anhdaidientintuc + "\" alt=\"\"></a><div class=\"txtwrap\"><h6 class=\"heading\">" + news[i].tieudetintuc + "</h6><p>" + news[i].noidungtomtat + "</p><footer></footer></div></article></li>";
+            out = out + "<li class=\"one_third\"><article><a href=\"/tintuc\"><img src=\"" + news[i].anhdaidientintuc + "\" alt=\"\"></a><div class=\"txtwrap\"><h6 class=\"heading\">" + news[i].tieudetintuc + "</h6><p>" + news[i].noidungtomtat + "</p><footer></footer></div></article></li>";
         };
 
         return out;
@@ -76,7 +76,7 @@ var homeHelper = {
         var out = "";
 
         for (i = 0; i < j; i++) {
-            out = out + "<li><a href=\"#\">" + news[i].tieudetintuc + "</a></li>";
+            out = out + "<li><a href=\"/tintuc\">" + news[i].tieudetintuc + "</a></li>";
         };
 
         return out;
