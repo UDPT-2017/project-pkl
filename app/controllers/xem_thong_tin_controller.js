@@ -1,5 +1,6 @@
 XemThongTinModel = require('../models/xem_thong_tin');
 XemThongTinHelper = require('../helpers/xem_thong_tin');
+var fs = require("fs");
 
 var XemThongTin = {
     index: function(req, res) {
@@ -65,6 +66,13 @@ var XemThongTin = {
         } else {
             res.redirect('/');
         }
+    },
+    thayDoiAnhDaiDien: function(req, res) {
+      console.log(req);
+        console.log('here');
+  //    fs.writeFile(filename, data[, options], function(err) {
+
+  //    });
     }
 };
 

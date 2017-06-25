@@ -31,7 +31,8 @@ module.exports = function(app, passport) {
         .post('/:tendangnhap/ChinhSuaGioiTinh', controllers.XemThongTin.chinhSuaThongTin)
         .post('/:tendangnhap/ChinhSuaDiaChi', controllers.XemThongTin.chinhSuaThongTin)
         .post('/:tendangnhap/ChinhSuaDienThoai', controllers.XemThongTin.chinhSuaThongTin)
-        .post('/:tendangnhap/ChinhSuaSoCMND', controllers.XemThongTin.chinhSuaThongTin);
+        .post('/:tendangnhap/ChinhSuaSoCMND', controllers.XemThongTin.chinhSuaThongTin)
+        .post('/:tendangnhap/ThayDoiAnhDaiDien', controllers.XemThongTin.thayDoiAnhDaiDien);
 
     app.use('/about',about);
     app.use('/', home);

@@ -148,10 +148,37 @@
     </div>
 </div>
 <script>
-    $('#select_file').click(function() {
-        var filename = $('#image_file').files;
+    function validate_fileupload(fileName) {
+        var allowed_extensions = new Array("jpg", "png", "gif");
+        var file_extension = fileName.split('.').pop(); // split function will split the filename by dot(.), and pop function will pop the last element from the array which will give you the extension as well. If there will be no extension then it will return the filename.
 
-        console.log(filename);
+        for (var i = 0; i <= allowed_extensions.length; i++) {
+            if (allowed_extensions[i] == file_extension) {
+                return true; // valid file extension
+            }
+        }
+
+        return false;
+    }
+
+    $('input[type=file]').change(function() {
+        var filename = $('input[type=file]').val().replace(/C:\\fakepath\\/i, '');
+
+        if (validate_fileupload(filename) == true) {
+          var formData = new FormData();
+
+          formData.append('image', $('input[type=file]')[0].files[0]);
+
+            $.ajax({
+                url: "/XemThongTin/{{user}}/ThayDoiAnhDaiDien",
+                type: 'POST',
+                data: formData,
+                contentType: false, // NEEDED, DON'T OMIT THIS (requires jQuery 1.6+)
+                processData: false, // NEEDED, DON'T OMIT THIS
+            });
+        } else {
+            alert('Không hỗ trợ đuôi file này');
+        }
     });
 
     $("#ChinhSuaTen").click(function() {
