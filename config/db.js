@@ -1,18 +1,26 @@
 var pg = require('pg');
+var parse = require('pg-connection-string').parse;
 
 // create a config to configure both pooling behavior
 // and client options
 // note: all config is optional and the environment variables
 // will be read if the config is not present
-var config = {
-  user: 'postgres', //env var: PGUSER
-  database: 'PHUONGTRANG', //env var: PGDATABASE
-  password: 'vuongngockim',  //env var: PGPASSWORD
-  host: 'localhost', // Server hosting the postgres database
-  port: 5432, //env var: PGPORT
-  max: 10, // max number of clients in the pool
-  idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed
-};
+var config;
+
+if (process.env.DATABASE_URL) {
+  config = parse(process.env.DATABASE_URL);
+}
+else {
+  config = {
+    user: 'postgres', //env var: PGUSER
+    database: 'PHUONGTRANG', //env var: PGDATABASE
+    password: 'vuongngockim',  //env var: PGPASSWORD
+    host: 'localhost', // Server hosting the postgres database
+    port: 5432, //env var: PGPORT
+    max: 10, // max number of clients in the pool
+    idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed
+  };
+}
 
 //this initializes a connection pool
 //it will keep idle connections open for 30 seconds
