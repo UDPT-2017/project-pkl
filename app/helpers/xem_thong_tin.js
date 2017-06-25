@@ -17,6 +17,7 @@ module.exports = {
                 data.user = thongtintaikhoan.TenDangNhap;
                 data.avartar = '/' + thongtintaikhoan.Avartar;
             } else {
+                console.log(thongtintaikhoan.Avartar);  
                 data.user = thongtintaikhoan.TenDangNhap;
                 data.avartar = '/' + thongtintaikhoan.Avartar;
                 data.thongtinkhachhang = thongtinkhachhang[0];

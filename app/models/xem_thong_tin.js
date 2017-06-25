@@ -42,5 +42,15 @@ module.exports = {
             callback(null);
           }
         });
+    },
+    thayDoiAnhDaiDien: function(link, tendangnhap, callback) {
+      pool.query("update TAIKHOAN set Avartar = $1 where TenDangNhap = $2", [link, tendangnhap], function(error, result) {
+        if (error) {
+          callback(error);
+        }
+        else {
+          callback(null);
+        }
+      });
     }
 };
