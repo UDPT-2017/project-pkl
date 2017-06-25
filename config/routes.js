@@ -25,13 +25,19 @@ module.exports = function(app, passport) {
         .get('/', controllers.Gallery.index)
         .post('/', controllers.Gallery.layDiaDiem);
 
-    var XemThongTin = router()
-      .get('/', controllers.XemThongTin.index);
+        var XemThongTin = router()
+        .get('/:tendangnhap', controllers.XemThongTin.index)
+        .post('/:tendangnhap/ChinhSuaTen', controllers.XemThongTin.chinhSuaThongTin)
+        .post('/:tendangnhap/ChinhSuaGioiTinh', controllers.XemThongTin.chinhSuaThongTin)
+        .post('/:tendangnhap/ChinhSuaDiaChi', controllers.XemThongTin.chinhSuaThongTin)
+        .post('/:tendangnhap/ChinhSuaDienThoai', controllers.XemThongTin.chinhSuaThongTin)
+        .post('/:tendangnhap/ChinhSuaSoCMND', controllers.XemThongTin.chinhSuaThongTin);
 
     app.use('/about',about);
     app.use('/', home);
     app.use('/signIn', signIn);
     app.use('/signUp', signUp);
     app.use('/Gallery', Gallery);
-    app.use('XemThongTin', XemThongTin);
+
+    app.use('/XemThongTin', XemThongTin);
 };

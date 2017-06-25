@@ -1,0 +1,244 @@
+<div class="container-fluid" style="background-image:url('/ligerrat/images/demo/backgrounds/Wooden.jpg');">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-sm-3 well">
+                <div class="well">
+                    <p><a href="#">Ảnh đại diện</a></p>
+                    <img src="{{avartar}}" class="img-circle" height="65" width="65" alt="Avatar">
+                    <br />
+                    <br />
+                    <p><a>Tên đăng nhập</a></p>
+                    <p>
+                        {{thongtintaikhoan.TenDangNhap}}
+                    </p>
+                    <a class="btn btn-primary" data-toggle="collapse" data-target="#DoiMatKhau">Đổi mật khẩu</a>
+                    <br />
+                    <br />
+                    <label id="select_file" class="btn btn-default btn-file">Sửa ảnh đại diện <input id="image_file" type="file" style="display: none;"></label>
+                    <div class="collapse" id="DoiMatKhau">
+                        <form>
+                            <div class="form-group">
+                                <label for="pwd">Mật khẩu mới:</label>
+                                <input type="password" class="form-control" id="pwd" name="password" placeholder="Xin nhập mật khẩu">
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Nhập lại mật khẩu mới:</label>
+                                <input type="password" class="form-control" id="pwd" name="password" placeholder="Xin nhập lại mật khẩu mới">
+                            </div>
+                            <a id="btnDoiMatKhau" class="btn btn-primary">Xác nhận</a>
+                            {{#if messageDoiMatKhau}}
+                                <div class="alert alert-danger">
+                                    <strong>{{messageDoiMatKhau}}</strong>
+                                </div>
+                            {{/if}}
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-7">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="panel panel-default text-left">
+                            <div class="panel-body">
+                                <p style="font-size:25px; text-align:center"><strong>Thông tin khách hàng</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="well">
+                            Tên
+                        </div>
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="well" contenteditable="true">
+                            {{thongtinkhachhang.tenkhachhang}}
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="well">
+                            <a id="ChinhSuaTen" style="cursor: pointer;"><span class="glyphicon glyphicon-pencil"></span></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="well">
+                            Giới tính
+                        </div>
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="well" contenteditable="true">
+                            {{thongtinkhachhang.gioitinhkh}}
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="well">
+                            <a id="ChinhSuaGioiTinh" style="cursor: pointer;"><span class="glyphicon glyphicon-pencil"></span></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="well">
+                            Địa chỉ
+                        </div>
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="well" contenteditable="true">
+                            {{thongtinkhachhang.diachikh}}
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="well">
+                            <a id="ChinhSuaDiaChi" style="cursor: pointer;"><span class="glyphicon glyphicon-pencil"></span></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="well">
+                            Số CMND
+                        </div>
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="well" contenteditable="true">
+                            {{thongtinkhachhang.socmndkh}}
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="well">
+                            <a id="ChinhSuaSoCMND" style="cursor: pointer;"><span class="glyphicon glyphicon-pencil"></span></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="well">
+                            Điện thoại
+                        </div>
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="well" contenteditable="true">
+                            {{thongtinkhachhang.dienthoaikh}}
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="well">
+                            <a id="ChinhSuaDienThoai" style="cursor: pointer;"><span class="glyphicon glyphicon-pencil"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2 well">
+                <div class="well">
+                    <p><a>Tiền</a></p>
+                    <p>
+                        {{thongtintaikhoan.SoTien}}
+                    </p>
+                </div>
+                <div class="well">
+                    <p><a>Loại tài khoản</a></p>
+                    <p>
+                        {{thongtintaikhoan.LoaiTaiKhoan}}
+                    </p>
+                </div>
+                <div class="well">
+                    <p><a>Điểm tích lũy</a></p>
+                    <p>
+                        {{thongtintaikhoan.DiemTichLuy}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $('#select_file').click(function() {
+        var filename = $('#image_file').files;
+
+        console.log(filename);
+    });
+
+    $("#ChinhSuaTen").click(function() {
+        var Ten = $(this).parent().parent().prev().children().text();
+
+        Ten = Ten.trim();
+
+        $.post("/XemThongTin/{{user}}/ChinhSuaTen", {
+            Ten: Ten
+        }, function(result) {
+            if (result.error) {
+                alert('Có lỗi trong lúc chỉnh sửa');
+            } else {
+                alert('Thành công');
+            }
+        });
+    });
+
+    $("#ChinhSuaGioiTinh").click(function() {
+        var GioiTinh = $(this).parent().parent().prev().children().text();
+
+        GioiTinh = GioiTinh.trim();
+
+        if (GioiTinh != 'Nam') {
+            if (GioiTinh != 'Nữ') {
+                alert('Giới tính phải là Nam hoặc Nữ');
+
+                return;
+            }
+        }
+
+        $.post("/XemThongTin/{{user}}/ChinhSuaGioiTinh", {
+            GioiTinh: GioiTinh
+        }, function(result) {
+            if (result.error) {
+                alert('Có lỗi trong lúc chỉnh sửa');
+            } else {
+                alert('Thành công');
+            }
+        });
+    });
+
+    $("#ChinhSuaDiaChi").click(function() {
+        var DiaChi = $(this).parent().parent().prev().children().text();
+
+        DiaChi = DiaChi.trim();
+
+        $.post("/XemThongTin/{{user}}/ChinhSuaDiaChi", {
+            DiaChi: DiaChi
+        }, function(result) {
+            if (result.error) {
+                alert('Có lỗi trong lúc chỉnh sửa');
+            } else {
+                alert('Thành công');
+            }
+        });
+    });
+
+    $("#ChinhSuaSoCMND").click(function() {
+        var SoCMND = $(this).parent().parent().prev().children().text();
+
+        SoCMND = SoCMND.trim();
+
+        $.post("/XemThongTin/{{user}}/ChinhSuaSoCMND", {
+            SoCMND: SoCMND
+        }, function(result) {
+            if (result.error) {
+                alert('Có lỗi trong lúc chỉnh sửa');
+            } else {
+                alert('Thành công');
+            }
+        });
+    });
+
+    $("#ChinhSuaDienThoai").click(function() {
+        var DienThoai = $(this).parent().parent().prev().children().text();
+
+        DienThoai = DienThoai.trim();
+
+        $.post("/XemThongTin/{{user}}/ChinhSuaDienThoai", {
+            DienThoai: DienThoai
+        }, function(result) {
+            if (result.error) {
+                alert('Có lỗi trong lúc chỉnh sửa');
+            } else {
+                alert('Thành công');
+            }
+        });
+    });
+</script>
