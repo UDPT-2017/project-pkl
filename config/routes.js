@@ -19,8 +19,9 @@ module.exports = function(app, passport) {
         .get('/signOut', controllers.signIn.index);
 
     var signUp = router()
-        .get('/', controllers.signUp.index)
-        .post('/', controllers.signUp.signUp);
+      .get('/', controllers.signUp.index)
+      .post('/', controllers.signUp.signUp);
+
 
     var about = router()
         .get('/', controllers.about.index);
@@ -28,6 +29,9 @@ module.exports = function(app, passport) {
     var Gallery = router()
         .get('/', controllers.Gallery.index)
         .post('/', controllers.Gallery.layDiaDiem);
+    var tintuc = router()
+        .get('/',controllers.tintuc.index)
+        .post('/',controllers.tintuc.laytintuc);
 
     var XemThongTin = router()
         .get('/:tendangnhap', controllers.XemThongTin.index)
@@ -46,7 +50,7 @@ module.exports = function(app, passport) {
     app.use('/signIn', signIn);
     app.use('/signUp', signUp);
     app.use('/Gallery', Gallery);
+    app.use('/tintuc',tintuc);
     app.use('/XemThongTin', XemThongTin);
     app.use('/xem_ve', ve);
-
 };

@@ -6,8 +6,8 @@ var pg = require('pg');
 // will be read if the config is not present
 var config = {
   user: 'postgres', //env var: PGUSER
-  database: 'PHUONGTRANG', //env var: PGDATABASE
-  password: 'vuongngockim',  //env var: PGPASSWORD
+  database: 'UDPT', //env var: PGDATABASE
+  password: 'lamtac21',  //env var: PGPASSWORD
   host: 'localhost', // Server hosting the postgres database
   port: 5432, //env var: PGPORT
   max: 10, // max number of clients in the pool

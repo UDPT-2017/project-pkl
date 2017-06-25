@@ -16,7 +16,7 @@ create table TINTUC
 (
 	MaTinTuc serial primary key,
 	TieuDeTinTuc text,
-	NgayDangTinTuc timestamp,
+	NgayDangTinTuc date,
 	NoiDungTomTat text,
 	NoiDungTinTuc text,
 	SoLuocLike integer,
@@ -319,18 +319,18 @@ values('KH005',N'Ngô Việt Anh',N'Nam',N'TP Hồ Chí Minh','988222455','09083
 --mật khẩu hash hqt2014-PKL@*
 --================================================================================
 insert into TAIKHOAN
-values('TK001',0,N'Thành viên',0,'thanhphi_hqtpkl','$2a$10$SOcu7UmX5ZbJDBVPd02QPOrZ2LS9GOGzKkxPF5SHeb/25PGMtxOva','KH001')
+values('TK001',0,N'Thành viên',0,'thanhphi_hqtpkl','$2a$10$SOcu7UmX5ZbJDBVPd02QPOrZ2LS9GOGzKkxPF5SHeb/25PGMtxOva','KH001','/images/PKL.jpg');
 insert into TAIKHOAN
-values('TK002',600,N'VIP',10000000,'hoangkim_hqtpkl','$2a$10$SOcu7UmX5ZbJDBVPd02QPOrZ2LS9GOGzKkxPF5SHeb/25PGMtxOva','KH002')
+values('TK002',600,N'VIP',10000000,'hoangkim_hqtpkl','$2a$10$SOcu7UmX5ZbJDBVPd02QPOrZ2LS9GOGzKkxPF5SHeb/25PGMtxOva','KH002','/images/PKL2.jpg');
 
 insert into TAIKHOAN
-values('TK003',700,N'VIP',10000000,'khanhlam_hqtpkl','$2a$10$SOcu7UmX5ZbJDBVPd02QPOrZ2LS9GOGzKkxPF5SHeb/25PGMtxOva','KH003')
+values('TK003',700,N'VIP',10000000,'khanhlam_hqtpkl','$2a$10$SOcu7UmX5ZbJDBVPd02QPOrZ2LS9GOGzKkxPF5SHeb/25PGMtxOva','KH003','/images/NHK.jpg');
 
 insert into TAIKHOAN
-values('TK004',900,N'Khách hàng thân thiết',20000000,'thienphu_hqtpkl','$2a$10$SOcu7UmX5ZbJDBVPd02QPOrZ2LS9GOGzKkxPF5SHeb/25PGMtxOva','KH004')
+values('TK004',900,N'Khách hàng thân thiết',20000000,'thienphu_hqtpkl','$2a$10$SOcu7UmX5ZbJDBVPd02QPOrZ2LS9GOGzKkxPF5SHeb/25PGMtxOva','KH004','/images/female_avartar.png');
 
 insert into TAIKHOAN
-values('TK005',800,N'Khách hàng thân thiết',5000000,'vietanh_hqtpkl','$2a$10$SOcu7UmX5ZbJDBVPd02QPOrZ2LS9GOGzKkxPF5SHeb/25PGMtxOva','KH005')
+values('TK005',800,N'Khách hàng thân thiết',5000000,'vietanh_hqtpkl','$2a$10$SOcu7UmX5ZbJDBVPd02QPOrZ2LS9GOGzKkxPF5SHeb/25PGMtxOva','KH005','/images/male_avartar.png');
 
 --================================================================================
 insert into VE
@@ -405,10 +405,27 @@ insert into gallery (LinkHA, DiaDiem, MoTa, MaDiaDiem) values('ligerrat/images/d
 insert into gallery (LinkHA, DiaDiem, MoTa, MaDiaDiem) values('ligerrat/images/demo/gallery/dalat6.jpg', 'Đà Lạt', 'Là một địa điểm du lịch tuyệt đẹp với nhiều kiến trúc cổ và hoa', 4);
 
 --===============================================================================================
-insert into TINTUC(TieuDeTinTuc,NgayDangTinTuc, NoiDungTomTat, NoiDungTinTuc, SoLuocLike, AnhDaiDienTinTuc) values('Phương Trang được nhà nước ban tạng giải thưởng vàng', '2017-06-10', 'Phương Trang được nhà nước ban tạng giải thưởng vàng', 'Phương Trang được nhà nước ban tạng giải thưởng vàng',  50, 'images/tintuc/tintuc6.png');
-insert into TINTUC(TieuDeTinTuc,NgayDangTinTuc, NoiDungTomTat, NoiDungTinTuc, SoLuocLike, AnhDaiDienTinTuc) values('Phương Trang mở thêm nhiều chuyến đường', '2017-06-12', 'Phương Trang mở thêm nhiều chuyến đường', 'Phương Trang mở thêm nhiều chuyến đường',  20, 'images/tintuc/tintuc3.png');
-insert into TINTUC(TieuDeTinTuc,NgayDangTinTuc, NoiDungTomTat, NoiDungTinTuc, SoLuocLike, AnhDaiDienTinTuc) values('Phương Trang tổ chức sinh nhật lần thứ 20', '2017-06-14', 'Phương Trang tổ chức sinh nhật lần thứ 20', 'Phương Trang tổ chức sinh nhật lần thứ 20',  50, 'images/tintuc/tintuc2.png');
-insert into TINTUC(TieuDeTinTuc,NgayDangTinTuc, NoiDungTomTat, NoiDungTinTuc, SoLuocLike, AnhDaiDienTinTuc) values('Phương Trang tặng phần thưởng cho học sinh nghèo', '2017-06-17', 'Phương Trang tặng phần thưởng cho học sinh nghèo', 'Phương Trang tặng phần thưởng cho học sinh nghèo',  50, 'images/tintuc/tintuc5.png');
-insert into TINTUC(TieuDeTinTuc,NgayDangTinTuc, NoiDungTomTat, NoiDungTinTuc, SoLuocLike, AnhDaiDienTinTuc) values('Phương Trang chiến thắng giải thưởng xe vàng', '2017-06-20', 'Phương Trang chiến thắng giải thưởng xe vàng', 'Phương Trang chiến thắng giải thưởng xe vàng',  50, 'images/tintuc/tintuc6.png');
-insert into TINTUC(TieuDeTinTuc,NgayDangTinTuc, NoiDungTomTat, NoiDungTinTuc, SoLuocLike, AnhDaiDienTinTuc) values('Phương Trang tăng lợi nhuận trong năm nay', '2017-06-21', 'Phương Trang tăng lợi nhuận trong năm nay', 'Phương Trang tăng lợi nhuận trong năm nay',  50, 'images/tintuc/tintuc3.png');
-insert into TINTUC(TieuDeTinTuc,NgayDangTinTuc, NoiDungTomTat, NoiDungTinTuc, SoLuocLike, AnhDaiDienTinTuc) values('Phương Trang mua thêm nhiều xe khách mới', '2017-06-25', 'Phương Trang mua thêm nhiều xe khách mới', 'Phương Trang mua thêm nhiều xe khách mới',  50, 'images/tintuc/tintuc1.png');
+insert into TINTUC(TieuDeTinTuc,NgayDangTinTuc, NoiDungTomTat, NoiDungTinTuc, SoLuocLike, AnhDaiDienTinTuc) values('Phương Trang được nhà nước ban tạng giải thưởng vàng', '2017-06-10', 'Phương Trang được nhà nước ban tạng giải thưởng vàng.Toàn thể công ty hân hoan cảm ơn sự ủng hộ của các quý khách hàng đã luôn tin tưởng và tin dùng dịch vụ của Phương Trang. ', 'Phương Trang được nhà nước ban tạng giải thưởng vàng',  50, 'images/tintuc/tintuc6.png');
+insert into TINTUC(TieuDeTinTuc,NgayDangTinTuc, NoiDungTomTat, NoiDungTinTuc, SoLuocLike, AnhDaiDienTinTuc) values('Phương Trang mở thêm nhiều chuyến đường', '2017-06-12', 'Phương Trang mở thêm nhiều chuyến đường', 'Phương Trang mở thêm nhiều chuyến đường xuyên Việt. Nhằm phục vụ nhu cầu của quý khach hàng, công ty Phương Trang mở thêm các tuyến đường đi miền Trung và Tây Bắc. Với phương châm là phục vụ khách hàng hết mình, vì khách hàng mà phục vụ.',  20, 'images/tintuc/tintuc3.png');
+insert into TINTUC(TieuDeTinTuc,NgayDangTinTuc, NoiDungTomTat, NoiDungTinTuc, SoLuocLike, AnhDaiDienTinTuc) values('Phương Trang tổ chức sinh nhật lần thứ 20', '2017-06-14', 'Phương Trang tổ chức sinh nhật lần thứ 20', 'Phương Trang tổ chức sinh nhật lần thứ 20. Phương Trang chân thành cảm ơn quý khách hàng đã tin tưởng và đồng hành cùng công ty trong suốt những năm vừa qua. Phương Trang cam kết cung cấp các dịch vụ tốt nhất cho khách hàng',  50, 'images/tintuc/tintuc2.png');
+insert into TINTUC(TieuDeTinTuc,NgayDangTinTuc, NoiDungTomTat, NoiDungTinTuc, SoLuocLike, AnhDaiDienTinTuc) values('Phương Trang tặng phần thưởng cho học sinh nghèo', '2017-06-17', 'Phương Trang tặng phần thưởng cho học sinh nghèo', 'Phương Trang tặng phần thưởng cho học sinh nghèo. Nhân dịp năm học mới, Phương Trang vô cùng hân hạnh trao trặng 500 suất học bổng cho các học sinh nghèo vượt khó trong thành phố Hồ Chí Minh nhằm giúp đỡ các em một phần chi phí cho năm học mới.',  50, 'images/tintuc/tintuc5.png');
+insert into TINTUC(TieuDeTinTuc,NgayDangTinTuc, NoiDungTomTat, NoiDungTinTuc, SoLuocLike, AnhDaiDienTinTuc) values('Phương Trang chiến thắng giải thưởng xe vàng', '2017-06-20', 'Phương Trang chiến thắng giải thưởng xe vàng', 'Phương Trang chiến thắng giải thưởng xe vàng. Cảm ơn quý khách đã luôn tín dụng và ủng hộ Phương Trang, Phương Trang cam kết cung cấp dịch vụ tốt nhất, vì trải nghiệm của khách hàng ',  50, 'images/tintuc/tintuc6.png');
+insert into TINTUC(TieuDeTinTuc,NgayDangTinTuc, NoiDungTomTat, NoiDungTinTuc, SoLuocLike, AnhDaiDienTinTuc) values('Phương Trang tăng lợi nhuận trong năm nay', '2017-06-21', 'Phương Trang tăng lợi nhuận trong năm nay', 'Phương Trang tăng lợi nhuận trong năm nay. Trong 3 tháng đầu năm, lợi nhuận của công ty tăng hơn 15% so với cùng kì năm ngoái. Phương Trang vô cùng cảm ơn quý khách đã tin chọn dịch vụ của chúng tôi',  50, 'images/tintuc/tintuc3.png');
+insert into TINTUC(TieuDeTinTuc,NgayDangTinTuc, NoiDungTomTat, NoiDungTinTuc, SoLuocLike, AnhDaiDienTinTuc) values('Phương Trang mua thêm nhiều xe khách mới', '2017-06-25', 'Phương Trang mua thêm nhiều xe khách mới', 'Phương Trang mua thêm nhiều xe khách mới. Nhằm nâng cao dịch vụ của hãng, Phương Trang vừa tăng cường thêm 500 xe 50 chỗ thế hệ mới nhằm phục vụ quý khách tốt hơn.',  50, 'images/tintuc/tintuc1.png');
+---===================================================================================================
+insert into TINTUC_COMMENTS(MaTinTuc,NoiDungComment,SoLuocLike,MaTaiKhoan ) values (1,'Chuc Mung Phuong Trang, mong Phuong Trang cang phat trien',1,'TK001');
+insert into TINTUC_COMMENTS(MaTinTuc,NoiDungComment,SoLuocLike,MaTaiKhoan ) values (1,'Chuc Mung Phuong Trang',1,'TK002');
+insert into TINTUC_COMMENTS(MaTinTuc,NoiDungComment,SoLuocLike,MaTaiKhoan ) values (1,'Xin chuc mung cong ty',1,'TK003');
+
+insert into TINTUC_COMMENTS(MaTinTuc,NoiDungComment,SoLuocLike,MaTaiKhoan ) values (2,'Chuc Mung Phuong Trang, mong Phuong Trang cang phat trien',1,'TK002');
+insert into TINTUC_COMMENTS(MaTinTuc,NoiDungComment,SoLuocLike,MaTaiKhoan ) values (2,'Chuc mung phuong trang mo them nhieu tuyen duong',1,'TK001');
+insert into TINTUC_COMMENTS(MaTinTuc,NoiDungComment,SoLuocLike,MaTaiKhoan ) values (2,' Mung Phuong Trang phat trien manh hon',1,'TK003');
+
+
+insert into TINTUC_COMMENTS(MaTinTuc,NoiDungComment,SoLuocLike,MaTaiKhoan ) values (3,'Chuc Mung Phuong Trang, mong Phuong Trang cang phat trien',1,'TK004');
+insert into TINTUC_COMMENTS(MaTinTuc,NoiDungComment,SoLuocLike,MaTaiKhoan ) values (3,'Chuc Mung Phuong Trang, mong Phuong Trang cang phat trien tot hon',1,'TK001');
+insert into TINTUC_COMMENTS(MaTinTuc,NoiDungComment,SoLuocLike,MaTaiKhoan ) values (3,'Chuc Mung Phuong Trang, mong Phuong Trang cang phat trien',1,'TK002');
+select * from TINTUC
+select * from TINTUC_COMMENTS where MaTinTuc = 1;
+select NoiDungComment  from TINTUC_COMMENTS where MaTinTuc = 1;
+select NoiDungComment from TINTUC_COMMENTS where MaTinTuc = 1 and TINTUC_COMMENTS.MaTaiKhoan like TAIKHOAN.MaTaiKhoan;
